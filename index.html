@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/ad42651166.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+     <!-- Google fonts link-->   
+    <link href='https://fonts.googleapis.com/css?family=Prompt' rel='stylesheet' type='text/css'>
+    <!-- Google fonts CSS --> 
+    <style type='text/css'>
+          .prompt { font-family: 'Prompt', sans-serif; }
+        body {
+            font-family: 'Prompt' !important; }
+    </style>
+
+  <title>แบบฟอร์มส่งหัวข้อโครงงานปริญญานิพนธ์ 2/2564</title>
+</head>
+
+<body>
+<!-- New Navbar  แบบใหม่ -->   
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">RUTS</a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="https://script.google.com/macros/s/AKfycbxYk-cM3fyM4DUz7NKRl7QbROqznD5TWqtJJsgjCyj0t78I10ZZ/exec">Home</a>
+        </li>
+        <li class="nav-item">
+        <?var url = getUrl();?>
+          <a class="nav-link" href="<?=url?>?page=page1">Page1</a>
+        </li>
+        <li class="nav-item">
+        <?var url = getUrl();?>
+          <a class="nav-link" href="<?=url?>?page=page2">Page2</a>
+        </li>
+      </ul>
+      
+      <form class="d-flex" id="search-form" onsubmit="handleFormSubmit(this)">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchtext" name="searchtext">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+  
+    <br>
+    <!-- Input form -->
+    <div class="container">
+        <form id="myForm" class="needs-validation" novalidate>                                  
+          <div class="row g-3">
+            <div class="col-md-6">
+			        <label >โปรดระบุอาจารย์ที่ปรึกษา :</label>
+                <select name="myLecturer" class="form-select" required> 
+                  <option value="" disabled selected>ระบุอาจารย์ที่ปรึกษา</option>
+                  <option value="ผู้ช่วยศาสตราจารย์สันติพงศ์ ตั้งธรรมกุล">ผู้ช่วยศาสตราจารย์สันติพงศ์ ตั้งธรรมกุล</option>
+                  <option value="ผู้ช่วยศาสตราจารย์พลอยกนก ขุนชำนาญ">ผู้ช่วยศาสตราจารย์พลอยกนก ขุนชำนาญ</option>
+                  <option value="ผู้ช่วยศาสตราจารย์ชัยนันท์ ปัญญาวุทโส">ผู้ช่วยศาสตราจารย์ชัยนันท์ ปัญญาวุทโส</option>
+                  <option value="ผู้ช่วยศาสตราจารย์กัณฐณา สุขแก้ว">ผู้ช่วยศาสตราจารย์กัณฐณา สุขแก้ว</option>
+                  <option value="ผู้ช่วยศาสตราจารย์ ดร.ธิดาภัทร อนุชาญ">ผู้ช่วยศาสตราจารย์ ดร.ธิดาภัทร อนุชาญ</option>
+                  <option value="อาจารย์พัชรี ทิพย์ประชา">อาจารย์พัชรี ทิพย์ประชา</option>
+                  <option value="อาจารย์ดนยรัตน์ คัคโนภาส">อาจารย์ดนยรัตน์ คัคโนภาส</option>
+                  <option value="อาจารย์ทีปกร นฤมาณนลินี">อาจารย์ทีปกร นฤมาณนลินี</option>
+                  <option value="อาจารย์รัสมนต์ ยุระพันธ์ุ">อาจารย์รัสมนต์ ยุระพันธ์ุ</option>
+                  <option value="อาจารย์จตุพร จิรันดร">อาจารย์จตุพร จิรันดร</option>
+                  <option value="อาจารย์อานนท์ บัวศรี">อาจารย์อานนท์ บัวศรี</option>
+                </select>
+                <div class="invalid-feedback">โปรดระบุอาจารย์ที่ปรึกษา</div>
+              <p>
+            </div>
+          </div>
+        <div class="col-md-3">
+          <label for="myleader" class="form-label">ขื่อหัวหน้าทีม :</label>
+          <input type="text" class="form-control" name="myleader" id="myleader" required>
+          <div class="invalid-feedback">โปรดระบุชื่อหัวหน้าทีม</div>
+        </div>
+        <div class="col-md-12">
+            <label for="myProjectTitle" class="form-label">หัวข้อโครงงาน : </label>
+            <input type="text" class="form-control" name="myProjectTitle" id="myProjectTitle" required>
+            <div class="invalid-feedback">โปรดระบุหัวข้อโครงงาน</div>
+        </div>
+        <div class="col-md-3">
+            <label for="myNumGroup" class="form-label">จำนวนสมาชิกในทีม :</label>
+        </div>
+        <div class="col-md-1">
+            <input type="text" class="form-control" name="myNumGroup" id="myNumGroup" required>
+            <div class="invalid-feedback">โปรดระบุจำนวนสมาชิกในทีม</div>
+        </div>        
+        <div class="col-md-3">
+            <label for="myEmail" class="form-label">อีเมลล์ :</label>
+            <input type="email" class="form-control" name="myEmail" id="myEmail" required>
+            <div class="invalid-feedback">โปรดระบุอีเมลล์</div> 
+        </div>
+        <div class="col-md-3">
+            <label for="myTelephone" class="form-label">เบอร์โทรศัพท์ติดต่อ :</label>
+            <input type="text" class="form-control" name="myTelephone" id="myTelephone" required>
+            <div class="invalid-feedback">โปรดระบุเบอร์โทรศัพท์</div>
+        </div>           
+        <div class="col-md-3">
+            <label for="myFile" class="form-label">เลือกไฟล์อัพโหลด :</label>
+            <input type="file" class="form-control" name="myFile" id="myFile" required>
+            <div class="invalid-feedback">โปรดเลือกไฟล์</div> 
+        </div>          
+      <div class="row">
+        <div class="col-md-4 mt-4">
+            <button type="submit" class="btn btn-success btn-lg" id="btn">submit</button>
+        </div>
+      </div>
+  </form>
+      
+      <!-- พื้นที่ส่วนที่ใช้แสดงผลลัพธ์และการค้นหา -->
+      <div id="output">
+      <br>
+        <div class="row">
+          <div class="col">
+                <!-- ## สร้างตาราง ------------------------------------------------ -->
+                <div id="search-results" class="table-responsive">
+                  <!-- แสดงข้อมูลที่นี่ -->
+                </div>
+                <!-- ## จบตาราง ------------------------------------------------ -->   
+           </div>
+          </div>
+      </div>
+</div>
+  
+  
+  
+</body>
+
+</html>
+
+<script>
+    (function () {
+        'use strict'
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }else{
+                        formSubmit()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+    let form = document.getElementById('myForm')
+
+    function formSubmit() {
+        event.preventDefault();
+        document.getElementById('btn').innerHTML = 'กำลังอัพโหลดไฟล์...';
+
+        google.script.run.withSuccessHandler(fileUploaded).uploadFiles(form);
+    }
+    function fileUploaded(status) {
+        document.getElementById('myForm').style.display = 'none';
+        document.getElementById('output').innerHTML = status;
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'อัพโหลดไฟล์เรียบร้อยแล้ว',
+            showConfirmButton: false,
+            timer: 2000
+        })
+    }
+
+</script>
+
+<!--JavaScript for Searhing -->
+<script>
+          window.addEventListener("load", preventFormSubmit, true); 
+
+          function preventFormSubmit() {
+            var forms = document.querySelectorAll('form');
+            for (var i = 0; i < forms.length; i++) {
+              forms[i].addEventListener('submit', function(event) {
+              event.preventDefault();
+              });
+            }
+          }
+          
+           //ทำการส่งค่าจากฟอร์ม
+          function handleFormSubmit(formObject) {
+            google.script.run.withSuccessHandler(createTable).processForm(formObject);
+            document.getElementById("search-form").reset();
+          }
+         
+          //สร้างตารางและข้อมูลในตาราง
+          function createTable(dataArray) {
+            if(dataArray && dataArray !== undefined && dataArray.length != 0){
+              var result = "<table class='table table-dark table-sm table-striped table-hover' id='dtable'>"+
+                           "<thead style='white-space: nowrap'>"+
+                             "<tr>"+
+                              "<th scope='col'>วันที่"+
+                              "<th scope='col'>อาจารย์ที่ปรึกษา</th>"+
+                              "<th scope='col'>ชื่อหัวหน้าทีม</th>"+
+                              "<th scope='col'>หัวข้อโครงงาน</th>"+
+
+
+
+                            "</tr>"+
+                          "</thead>";
+              for(var i=0; i<dataArray.length; i++) {
+                  result += "<tr>";
+                  for(var j=0; j<dataArray[i].length; j++){
+                      result += "<td>"+dataArray[i][j]+"</td>";
+                  }
+                  result += "</tr>";
+              }
+              result += "</table>";
+              var div = document.getElementById('search-results');
+              div.innerHTML = result;
+            }else{
+              var div = document.getElementById('search-results');
+              //div.empty()
+              div.innerHTML = "ไมพบข้อมูลที่ค้นหา!";
+            }
+          }
+</script>
+
+<!-- JavaScript Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<!-- JavaScript SweetAlert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
